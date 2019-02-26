@@ -17,6 +17,10 @@
 @@WebPDataset
 @@TIFFDataset
 @@decode_webp
+@@WebPImageSourceFromString
+@@WebPImageSourceFromFile
+@@ImageSourceToDebug
+
 """
 
 from __future__ import absolute_import
@@ -26,6 +30,9 @@ from __future__ import print_function
 from tensorflow_io.image.python.ops.image_dataset_ops import WebPDataset
 from tensorflow_io.image.python.ops.image_dataset_ops import TIFFDataset
 from tensorflow_io.image.python.ops.image_dataset_ops import decode_webp
+from tensorflow_io.image.python.ops.image_dataset_ops import WebPImageSourceFromString
+from tensorflow_io.image.python.ops.image_dataset_ops import WebPImageSourceFromFile
+from tensorflow_io.image.python.ops.image_dataset_ops import ImageSourceToDebug
 
 from tensorflow.python.util.all_util import remove_undocumented
 
@@ -33,6 +40,9 @@ _allowed_symbols = [
     "WebPDataset",
     "TIFFDataset",
     "decode_webp",
+    "WebPImageSourceFromString",
+    "WebPImageSourceFromFile",
+    "ImageSourceToDebug",
 ]
 
 remove_undocumented(__name__)

@@ -7,7 +7,16 @@ cc_binary(
     srcs = [
         "kernels/webp_dataset_ops.cc",
         "kernels/tiff_dataset_ops.cc",
+	"kernels/iobase.cc",
+	"kernels/iobase.h",
+	"kernels/iobase_internal.h",
+	"kernels/imagesource.cc",
+	"kernels/imagesource.h",
+	"kernels/webp_imagesource.cc",
+	
         "ops/dataset_ops.cc",
+	"ops/image_ops.cc",
+
     ],
     linkshared = 1,
     deps = [

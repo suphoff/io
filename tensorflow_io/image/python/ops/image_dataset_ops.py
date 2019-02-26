@@ -98,3 +98,47 @@ def decode_webp(contents, name=None):
     A `Tensor` of type `uint8` and shape of `[height, width, 4]` (RGBA).
   """
   return image_ops.decode_web_p(contents, name=name)
+
+
+def WebPImageSourceFromString(contents, name=None):
+  """
+  Decode a WebP-encoded image to an ImageSource variant tensor.
+
+  Args:
+    contents: A `Tensor` of type `string`. 0-D.  The WebP-encoded image.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` of type `variant`
+  """
+  return image_ops.web_p_image_source_from_string(contents, name=name)
+
+
+def WebPImageSourceFromFile(filename, name=None):
+  """
+  Decode a WebP-encoded image to an ImageSource variant tensor.
+
+  Args:
+    filename: A `Tensor` of type `string`. 0-D.  The filename of the WebP-encoded image.
+    name: A name for the operation (optional).
+  Returns:
+    A `Tensor` of type `variant`
+
+  """
+  return image_ops.web_p_image_source_from_file(filename, name=name)
+
+
+def ImageSourceToDebug(imageset, name=None):
+  """
+  Decode a WebP-encoded image to an ImageSource variant tensor.
+
+  Args:
+    filename: A `Tensor` of type `string`. 0-D.  The filename of the WebP-encoded image.
+    name: A name for the operation (optional).
+  Returns:
+    A `Tensor` of type `variant`
+
+  """
+  return image_ops.image_source_to_debug(imageset, name=name)
+
+
